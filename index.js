@@ -37,7 +37,7 @@ function startSpeedTest() {
         .catch((error) => {
             speedEl.classList.remove("is-testing"); // Stop the loading animation
             speedEl.classList.remove("is-result");
-            speedEl.classList.remove("slow-speed"); // Just in case
+            speedEl.classList.add("slow-speed"); // Just in case
             speedEl.style.borderRight = "none";
             speedEl.textContent = `Test failed.`;
             console.error("Error fetching files.", error);
