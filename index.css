@@ -1,0 +1,69 @@
+body {
+    font-family: monospace;
+    font-size: 18px;
+    background-color: #1c4865;
+    height: 100vh;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #16ff60;
+}
+
+p {
+    margin-top: 50px;
+}
+
+button {
+    cursor: pointer;
+    border-radius: 3px;
+    background-color: rgb(164, 163, 163);
+    font-family: monospace;
+    font-size: 20px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    width: 250px;
+    align-items: center;
+}
+
+button:hover {
+    background-color: #cecccc; /* Green */
+    /* color: white;
+    border: solid; */
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.6);
+}
+
+/* Keep your keyframes */
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 15ch;
+    }
+    100% {
+        width: 15ch;
+    }
+}
+
+@keyframes typeResult {
+    from {
+        width: 0;
+    }
+    to {
+        width: 42ch;
+    }
+}
+
+.is-testing {
+    font-family: monospace;
+    overflow: hidden;
+    white-space: nowrap;
+    color: rgb(217, 255, 210);
+    display: block;
+    animation:
+        typing 1.5s steps(15) infinite,
+        blink 0.75s step-end infinite;
+}
