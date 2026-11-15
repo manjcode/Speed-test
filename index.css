@@ -68,3 +68,7 @@ button:hover {
         typing 1.5s steps(15) infinite,
         blink 0.75s step-end infinite;
 }
+
+.slow-speed {
+    color: red;
+}

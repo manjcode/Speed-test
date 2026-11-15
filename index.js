@@ -2,6 +2,7 @@ let speedEl = document.getElementById("speed-el");
 
 function startSpeedTest() {
     speedEl.classList.remove("is-testing");
+    speedEl.classList.remove("slow-speed");
     // speedEl.classList.remove("is-result");
     speedEl.textContent = "Running test...";
     speedEl.classList.add("is-testing");
@@ -25,12 +26,18 @@ function startSpeedTest() {
                 // speedEl.classList.add("is-result");
                 speedEl.style.borderRight = "none";
                 console.log(`Your internet speed is ${internetSpeed} Mbps`);
-                speedEl.textContent = `Your internet speed is ${internetSpeed.toFixed(2)} Mbps`;
+                if (internetSpeed > 50) {
+                    speedEl.textContent = `Your internet speed is ${internetSpeed.toFixed(2)} Mbps :)`;
+                } else {
+                    speedEl.classList.add("slow-speed");
+                    speedEl.textContent = `Your internet speed is ${internetSpeed.toFixed(2)} :(`;
+                }
             }, 2500);
         })
         .catch((error) => {
             speedEl.classList.remove("is-testing"); // Stop the loading animation
-            speedEl.classList.remove("is-result"); // Just in case
+            speedEl.classList.remove("is-result");
+            speedEl.classList.remove("slow-speed"); // Just in case
             speedEl.style.borderRight = "none";
             speedEl.textContent = `Test failed.`;
             console.error("Error fetching files.", error);
