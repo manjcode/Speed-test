@@ -7,7 +7,7 @@ function startSpeedTest() {
     speedEl.classList.add("is-testing");
     console.log("button clicked");
     const speedTestUrl =
-        "https://h3.speed.cloudflare.com/__down?bytes=10000000"; //10MB
+        "https://h3.speed.cloudflare.com/__down?bytes=30000000"; //10MB
     let startTime = performance.now();
     fetch(speedTestUrl)
         .then((response) => {
