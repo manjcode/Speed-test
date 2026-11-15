@@ -18,6 +18,7 @@ button {
     cursor: pointer;
     border-radius: 3px;
     background-color: rgb(164, 163, 163);
+    color: black;
     font-family: monospace;
     font-size: 20px;
     border: none;
